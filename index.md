@@ -6,8 +6,8 @@
 
 			embeddedservice_bootstrap.init(
 				'00DDE0000044R3Q',
-				'MIAW_Chat_Without_PreChat_QueueBased',
-				'https://mcsg--dev.sandbox.my.site.com/ESWMIAWChatWithoutPreC1705495884793',
+				'MIAW_Chat_With_PreChat_FlowBased',
+				'https://mcsg--dev.sandbox.my.site.com/ESWMIAWChatWithPreChat1705509638598',
 				{
 					scrt2URL: 'https://mcsg--dev.sandbox.my.salesforce-scrt.com'
 				}
@@ -17,4 +17,4 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWMIAWChatWithoutPreC1705495884793/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWMIAWChatWithPreChat1705509638598/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>

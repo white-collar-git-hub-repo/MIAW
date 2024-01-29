@@ -1,8 +1,3 @@
-<html>
-<head>
-<title>MIAW</title>
-</head>
-<body>
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
@@ -10,8 +5,8 @@
 
 			embeddedservice_bootstrap.init(
 				'00DDE0000044R3Q',
-				'testW3Stest',
-				'https://mcsg--dev.sandbox.my.site.com/ESWtestW3Stest1706537635598',
+				'ghTestSite',
+				'https://mcsg--dev.sandbox.my.site.com/ESWghTestSite1706538546589',
 				{
 					scrt2URL: 'https://mcsg--dev.sandbox.my.salesforce-scrt.com'
 				}
@@ -21,6 +16,5 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWtestW3Stest1706537635598/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-</body>
-</html>
+<script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWghTestSite1706538546589/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+

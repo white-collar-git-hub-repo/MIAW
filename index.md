@@ -1,3 +1,10 @@
+<script>
+    window.addEventListener("onEmbeddedMessagingReady", () => {            
+        console.log( "Inside Prechat API!!" );
+        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "referringSiteURI" : window.location.origin } );
+    });
+</script>
+
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {

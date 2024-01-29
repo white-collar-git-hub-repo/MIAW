@@ -1,7 +1,7 @@
 <script>
     window.addEventListener("onEmbeddedMessagingReady", () => {            
         console.log( "Inside Prechat API!!" );
-        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "referringSiteURI" : window.location.origin } );
+        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "referringSiteURI" : JSON.parse(sessionStorage.getItem('invokeCtaEvent')).referringSiteURI } );
     });
 </script>
 

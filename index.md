@@ -1,20 +1,18 @@
 <script>
     window.addEventListener("onEmbeddedMessagingReady", () => {            
         console.log( "Inside Prechat API!!" );
-        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "referringSiteURI" : JSON.parse(sessionStorage.getItem('invokeCtaEvent')).referringSiteURI } );
-    });
+    embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "Queue_Name" : 'tesstt' } );
 </script>
 
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
-			embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+			embeddedservice_bootstrap.settings.language = 'es'; // For example, enter 'en' or 'en-US'
 
 			embeddedservice_bootstrap.init(
 				'00DDE0000044R3Q',
-				'MIAW_Chat_With_PreChat_FlowBased',
-				'https://mcsg--dev.sandbox.my.site.com/ESWMIAWChatWithPreChat1705509638598',
+				'McAfee_Chat',
+				'https://mcsg--dev.sandbox.my.site.com/ESWMcAfeeChat1707158023631',
 				{
 					scrt2URL: 'https://mcsg--dev.sandbox.my.salesforce-scrt.com'
 				}
@@ -24,4 +22,5 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWMIAWChatWithPreChat1705509638598/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWMcAfeeChat1707158023631/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+

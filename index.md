@@ -1,10 +1,4 @@
 <script>
-document.getElementById('initializeButton').addEventListener('click', function() {
-    initEmbeddedMessaging(window.varLang);
-});
-</script>
-
-<script>
     window.addEventListener("onEmbeddedMessagingReady", () => {            
         console.log( "Inside Prechat API!!" );
     embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "Queue_Name" : 'tesstt' } );
@@ -32,6 +26,11 @@ document.getElementById('initializeButton').addEventListener('click', function()
 <script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWMcAfeeChat1707158023631/assets/js/bootstrap.min.js'></script>
 
 <button id="initializeButton">Initialize</button>
+<script>
+document.getElementById('initializeButton').addEventListener('click', function() {
+    initEmbeddedMessaging(window.varLang);
+});
+</script>
 
 <button onclick='embeddedservice_bootstrap.utilAPI.showChatButton()'>Show button</button >
 

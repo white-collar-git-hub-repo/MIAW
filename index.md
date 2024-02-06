@@ -4,6 +4,31 @@
     embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "Queue_Name" : 'tesstt' } );
 </script>
 
+<script>
+	function loadJws(){
+		document.getElementById('loadBootstrapScript').addEventListener('click', function() {
+		    // Check if the script is already loaded to prevent duplicates
+		    if (!document.getElementById('dynamicBootstrapScript')) {
+		        // Create a new script element
+		        var scriptElement = document.createElement('script');
+		        scriptElement.id = 'dynamicBootstrapScript'; // Assign an ID for potential future reference
+		        scriptElement.type = 'text/javascript';
+		        scriptElement.src = 'https://mcsg--dev.sandbox.my.site.com/ESWMcAfeeChat1707158023631/assets/js/bootstrap.min.js';
+		        
+		        // Define the onload handler
+		        scriptElement.onload = function() {
+		            initEmbeddedMessaging();
+		        };
+		
+		        // Append the script element to the document's body
+		        document.body.appendChild(scriptElement);
+		    } else {
+		        console.log('Bootstrap script is already loaded.');
+		    }
+		});
+	}
+</script>
+
 <script id="dynamicScript" type="text/javascript">
        function initEmbeddedMessaging() {
 		try {
@@ -23,8 +48,8 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWMcAfeeChat1707158023631/assets/js/bootstrap.min.js'></script>
 
+<button id="loadScriptButton" onclick="loadJws">Load Script</button>
 
 <button onclick="initEmbeddedMessaging()">Chat Online</button>
 

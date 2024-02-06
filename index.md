@@ -17,7 +17,12 @@
 				{
 					scrt2URL: 'https://mcsg--dev.sandbox.my.salesforce-scrt.com'
 				}
-			);
+			).then(function() {
+			    embeddedservice_bootstrap.utilAPI.launchChat();
+			}).catch(function(error) {
+			    console.error("Error initializing chat:", error);
+			});
+			
 		} catch (err) {
 			console.error('Error loading Embedded Messaging: ', err);
 		}

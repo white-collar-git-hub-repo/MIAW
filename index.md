@@ -4,12 +4,26 @@
     embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "Queue_Name" : 'tesstt' } );
 </script>
 
-<script type='text/javascript'>
-       function initEmbeddedMessaging(lang) {
-		try {
-			embeddedservice_bootstrap.settings.language = lang; // For example, enter 'en' or 'en-US'
-			
+<script>
+	function reloadScript() {
+	    // Identify the existing script element
+	    const existingScript = document.getElementById('dynamicScript');
+	    
+	    // Create a new script element
+	    const newScript = document.createElement('script');
+	    newScript.id = existingScript.id; // Copy the ID
+	    //newScript.src = existingScript.src + '?cache=' + new Date().getTime(); // Append cache busting
+	    
+	    // Replace the existing script with the new one
+	    existingScript.parentNode.replaceChild(newScript, existingScript);
+	}
+</script>
 
+<script id="dynamicScript" type='text/javascript'>
+       function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = window.varLang; // For example, enter 'en' or 'en-US'
+			
 			embeddedservice_bootstrap.init(
 				'00DDE0000044R3Q',
 				'McAfee_Chat',
@@ -25,13 +39,8 @@
 </script>
 <script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWMcAfeeChat1707158023631/assets/js/bootstrap.min.js'></script>
 
-<button id="initializeButton">Initialize</button>
-<script>
-document.getElementById('initializeButton').addEventListener('click', function() {
-    initEmbeddedMessaging(window.varLang);
-});
-</script>
+<button id="reloadScript()">Initialize</button>
 
-<button onclick='embeddedservice_bootstrap.utilAPI.showChatButton()'>Show button</button >
+<button id="initEmbeddedMessaging()">Initialize</button>
 
 <button onclick='embeddedservice_bootstrap.utilAPI.launchChat()'>Launch Chat</button >

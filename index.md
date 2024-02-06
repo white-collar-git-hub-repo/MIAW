@@ -4,7 +4,7 @@
     embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "Queue_Name" : 'tesstt' } );
 </script>
 
-<script type="text/javascript">
+<script id="dynamicScript" type="text/javascript">
        function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = window.varLang; // For example, enter 'en' or 'en-US'

@@ -70,6 +70,6 @@
 
 <button id="reloadScript()">Initialize</button>
 
-<button id="initEmbeddedMessaging()">Initialize</button>
+<button id="initEmbeddedMessaging2()">Initialize</button>
 
 <button onclick='embeddedservice_bootstrap.utilAPI.launchChat()'>Launch Chat</button >

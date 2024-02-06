@@ -68,7 +68,7 @@
 
 
 
-<button id="reloadScript()">Initialize</button>
+<button id="reloadInit()">Initialize</button>
 
 <button id="initEmbeddedMessaging2()">Initialize</button>
 

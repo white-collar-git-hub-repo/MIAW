@@ -4,12 +4,8 @@
     embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "Queue_Name" : 'tesstt' } );
 </script>
 
-<script>
-    window.onload = initEmbeddedMessaging();
-</script>
-
 <script id="dynamicScript" type="text/javascript">
-       function initEmbeddedMessaging() {
+   window.initEmbeddedMessaging = function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = window.varLang; // For example, enter 'en' or 'en-US'
 			embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
@@ -30,5 +26,8 @@
 </script>
 <script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWMcAfeeChat1707158023631/assets/js/bootstrap.min.js'></script>
 
+<script>
+    window.onload = initEmbeddedMessaging;
+</script>
 
 <button onclick='embeddedservice_bootstrap.utilAPI.launchChat()'>Start Chat</button >

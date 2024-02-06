@@ -49,7 +49,7 @@
 	};
 </script>
 
-<button id="loadScriptButton" onclick="loadJws">Load Script</button>
+<button id="loadScriptButton" onclick="loadJws()">Load Script</button>
 
 <button onclick="initEmbeddedMessaging()">Chat Online</button>
 

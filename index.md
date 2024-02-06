@@ -4,6 +4,10 @@
     embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "Queue_Name" : 'tesstt' } );
 </script>
 
+<script>
+    window.onload = initEmbeddedMessaging();
+</script>
+
 <script id="dynamicScript" type="text/javascript">
        function initEmbeddedMessaging() {
 		try {
@@ -18,8 +22,6 @@
 					scrt2URL: 'https://mcsg--dev.sandbox.my.salesforce-scrt.com'
 				}
 			);
-
-			embeddedservice_bootstrap.utilAPI.launchChat();
 			
 		} catch (err) {
 			console.error('Error loading Embedded Messaging: ', err);
@@ -28,8 +30,5 @@
 </script>
 <script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWMcAfeeChat1707158023631/assets/js/bootstrap.min.js'></script>
 
-<button id="loadBootstrapScript" onclick="initEmbeddedMessaging()">Load Script</button>
-
-<button onclick="initEmbeddedMessaging()">Chat Online</button>
 
 <button onclick='embeddedservice_bootstrap.utilAPI.launchChat()'>Start Chat</button >

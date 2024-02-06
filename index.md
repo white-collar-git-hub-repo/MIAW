@@ -4,26 +4,14 @@
     embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields( { "Queue_Name" : 'tesstt' } );
 </script>
 
-<script>
-	function reloadScript() {
-	    // Identify the existing script element
-	    const existingScript = document.getElementById('dynamicScript');
-	    
-	    // Create a new script element
-	    const newScript = document.createElement('script');
-	    newScript.id = existingScript.id; // Copy the ID
-	    //newScript.src = existingScript.src + '?cache=' + new Date().getTime(); // Append cache busting
-	    
-	    // Replace the existing script with the new one
-	    existingScript.parentNode.replaceChild(newScript, existingScript);
-	}
-</script>
+<script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWMcAfeeChat1707158023631/assets/js/bootstrap.min.js'></script>
 
-<script id="dynamicScript" type='text/javascript'>
+<script type="text/javascript">
        function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = window.varLang; // For example, enter 'en' or 'en-US'
-			
+			embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
+
 			embeddedservice_bootstrap.init(
 				'00DDE0000044R3Q',
 				'McAfee_Chat',
@@ -37,7 +25,48 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWMcAfeeChat1707158023631/assets/js/bootstrap.min.js'></script>
+
+
+<script>
+
+	function initEmbeddedMessaging2(){
+		var newScriptElement = document.createElement('script');
+		newScriptElement.id = 'dynamicScript';
+		newScriptElement.type = 'text/javascript';
+		newScriptElement.innerHTML = `
+		    function initEmbeddedMessaging() {
+		        try {
+		            embeddedservice_bootstrap.settings.language = window.varLang;
+		            embeddedservice_bootstrap.init(
+		                '00DDE0000044R3Q',
+		                'McAfee_Chat',
+		                'https://mcsg--dev.sandbox.my.site.com/ESWMcAfeeChat1707158023631',
+		                {
+		                    scrt2URL: 'https://mcsg--dev.sandbox.my.salesforce-scrt.com'
+		                }
+		            );
+		        } catch (err) {
+		            console.error('Error loading Embedded Messaging: ', err);
+		        }
+		    };
+		`;
+		
+		document.body.appendChild(newScriptElement);
+	}
+	
+	function reloadInit(){
+		var scriptElement = document.getElementById('dynamicScript');
+		if (scriptElement){
+			scriptElement.parentNode.removeChild(scriptElement);
+			initEmbeddedMessaging2();
+		}
+	}
+</script>
+
+
+
+
+
 
 <button id="reloadScript()">Initialize</button>
 

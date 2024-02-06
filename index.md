@@ -8,6 +8,7 @@
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = window.varLang; // For example, enter 'en' or 'en-US'
+			embeddedservice_bootstrap.settings.hideChatButtonOnLoad();
 
 			embeddedservice_bootstrap.init(
 				'00DDE0000044R3Q',
@@ -23,6 +24,9 @@
 	};
 </script>
 <script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWMcAfeeChat1707158023631/assets/js/bootstrap.min.js'></script>
-</br>
+
 <button onclick='initEmbeddedMessaging()'>Initailize</button >
+
+<button onclick='embeddedservice_bootstrap.utilAPI.showChatButton()'>Show button</button >
+
 <button onclick='embeddedservice_bootstrap.utilAPI.launchChat()'>Launch Chat</button >

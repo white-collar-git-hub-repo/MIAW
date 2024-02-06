@@ -11,7 +11,7 @@ document.getElementById('initializeButton').addEventListener('click', function()
 </script>
 
 <script type='text/javascript'>
-window.initEmbeddedMessaging =	function initEmbeddedMessaging(lang) {
+       function initEmbeddedMessaging(lang) {
 		try {
 			embeddedservice_bootstrap.settings.language = lang; // For example, enter 'en' or 'en-US'
 			

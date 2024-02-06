@@ -5,7 +5,7 @@
 </script>
 
 <script type='text/javascript'>
-	function initEmbeddedMessaging() {
+window.initEmbeddedMessaging =	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = window.varLang; // For example, enter 'en' or 'en-US'
 			

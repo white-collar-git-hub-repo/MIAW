@@ -7,8 +7,8 @@
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
-			embeddedservice_bootstrap.settings.language = JSON.parse(sessionStorage.userDetails).lang;
-			embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
 			embeddedservice_bootstrap.init(
 				'00DDE0000044R3Q',
 				'McAfee_Chat',
@@ -22,7 +22,7 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWMcAfeeChat1707158023631/assets/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='https://mcsg--dev.sandbox.my.site.com/ESWMcAfeeChat1707158023631/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 
 <button onclick='initEmbeddedMessaging()'>initEmbeddedMessaging</button >

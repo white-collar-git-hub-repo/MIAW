@@ -6,8 +6,7 @@
   link.setAttribute('href', url);
   link.setAttribute('rel', 'stylesheet');
   document.head.appendChild(link);
-    
-<script>
+</script>
 
 <button id="loadScriptButton">Load Chat Script</button>
 

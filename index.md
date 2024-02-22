@@ -1,12 +1,4 @@
-<script>
 
-  const now = + new Date();
-  const url = 'https://mcsg--dev.sandbox.my.site.com/resource/' + String(now) + '/McAfeeChatResources/css/McAfeeChatCSS.css';
-  const link = document.createElement('link');
-  link.setAttribute('href', url);
-  link.setAttribute('rel', 'stylesheet');
-  document.head.appendChild(link);
-</script>
 
 <button id="loadScriptButton">Load Chat Script</button>
 

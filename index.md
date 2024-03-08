@@ -5,20 +5,23 @@
 
 <script>
 function loadExternalScript(scriptUrl) {
-    // Check if the script has already been loaded
-    if (!document.querySelector(`script[src="${scriptUrl}"]`)) {
-        const script = document.createElement('script');
-        script.src = scriptUrl;
-        script.onload = function() {
-            console.log('Script loaded successfully.');
-        };
-        script.onerror = function() {
-            console.error('Error loading the script.');
-        };
-        document.body.appendChild(script);
-    } else {
-        console.log('Script is already loaded.');
+    // Check if the script is already loaded
+    const existingScript = document.querySelector(`script[src="${scriptUrl}"]`);
+    if (existingScript) {
+        console.log('Script is already loaded, removing it.');
+        existingScript.remove();
     }
+
+    // Regardless of the existing script, load a new instance
+    const script = document.createElement('script');
+    script.src = scriptUrl;
+    script.onload = function() {
+        console.log('Script loaded successfully.');
+    };
+    script.onerror = function() {
+        console.error('Error loading the script.');
+    };
+    document.body.appendChild(script);
 }
 
 document.getElementById('loadScriptButton').addEventListener('click', function() {
